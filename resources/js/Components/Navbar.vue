@@ -194,6 +194,19 @@
                 </a>
             </li>
             <li class="nav-item">
+                <Link
+                    :href="route('logout')"
+                    method="post"
+                    as="button"
+                    class="nav-link"
+                    role="button"
+                    data-slide="true"
+                    data-widget="control-sidebar"
+                >
+                    <i class="fas fa-sign-out-alt"></i>
+                </Link>
+            </li>
+            <li class="nav-item">
                 <a
                     class="nav-link"
                     data-widget="control-sidebar"
@@ -208,10 +221,6 @@
     </nav>
 </template>
 
-<script>
-export default {
-    setup() {
-        return {};
-    },
-};
+<script setup>
+import { Link } from "@inertiajs/inertia-vue3";
 </script>
